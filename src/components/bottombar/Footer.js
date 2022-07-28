@@ -2,20 +2,10 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 export default function Footer() {
     return (
-        // <footer className="relative flex bg-[#595959] text-white h-[140px] w-auto ">
-        //     <div className="flex font-['Lato'] items-center px-5 h-full ">
-        //         <span>COPYRIGHT© SALAD</span>
-        //     </div>
-        //     <div className="flex justify-end items-center">
-        //         <InstagramIcon />
-        //         <WhatsAppIcon />
-        //     </div>
-        // </footer>
         <footer className="flex justify-between w-full bg-[#595959] text-white font-['Lato']  h-[70px] items-center  text-xm ">
-            <span className="p-5 opacity-70">COPYRIGHT© SALAD</span>
-
-            <div className="flex p-5 opacity-70">
-                <InstagramIcon className="mr-2" />
+            <span className="pl-16 opacity-70">COPYRIGHT© SALAD</span>
+            <div className="flex pr-10 opacity-70">
+                <InstagramIcon className="mr-4" />
                 <WhatsAppIcon />
             </div>
         </footer>
