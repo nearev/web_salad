@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+import Home from "./pages/HomePage";
+import Projects from "./pages/ProjectsPage";
 function App() {
     return (
         <Layout>
