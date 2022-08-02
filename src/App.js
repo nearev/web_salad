@@ -1,21 +1,17 @@
 import React from "react";
 import "./App.css";
-import Footer from "./components/bottombar/Footer";
-import FooterContact from "./components/bottombar/FooterContact";
-import Navbar from "./components/topbar/Navbar";
-import Banner from "./components/banner/Banner";
-import FeaturedProjects from "./components/content/FeaturedProjects";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 function App() {
     return (
-        <div className="App tracking-widest">
-            <header>
-                <Navbar />
-                <Banner />
-                <FeaturedProjects />
-            </header>
-            <FooterContact />
-            <Footer />
-        </div>
+        <Layout>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+            </Routes>
+        </Layout>
     );
 }
 

@@ -2,11 +2,14 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function Banner() {
     const styles = {
-        height: 32 + "rem",
+        backgroundImage: "url(assets/citra.jpg)",
     };
     return (
-        <div className="w-full bg-cover bg-center" style={styles}>
-            <div class="flex items-center justify-between h-full w-full bg-gray-900 bg-opacity-50">
+        <div className="w-full bg-cover bg-center h-[1080px] w-[1920px]">
+            <div
+                class="flex items-center justify-between h-full w-full bg-cover bg-center"
+                style={styles}
+            >
                 <button className="px-5 opacity-50">
                     <ArrowBackIosIcon />
                 </button>
