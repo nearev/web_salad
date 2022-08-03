@@ -3,7 +3,7 @@ export default function FeaturedProjects() {
         //box luar
         <div className="font-['Lato'] bg-[#323332] text-white ">
             {/* judul*/}
-            <div className="flex-grow mb-auto text-white pl-16 py-16">
+            <div className="flex-grow mb-auto text-2xl pl-16 py-14">
                 <span> FEATURED PROJECTS </span>
             </div>
             {/* box dalem (hitam) */}
@@ -28,7 +28,7 @@ export default function FeaturedProjects() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center pb-5">
+            <div className="flex justify-center pb-14">
                 {/* box 2 */}
                 <div className="flex bg-[#292929] w-[1300px] h-[550px] rounded-xl">
                     {/* ini description */}
