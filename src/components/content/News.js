@@ -4,7 +4,7 @@ export default function FeaturedProjects() {
         <div className="font-['Lato'] bg-[#323332] text-white ">
             {/* judul*/}
             <div className="flex-grow mb-auto text-2xl pl-16 py-14">
-                <span> FEATURED PROJECTS </span>
+                <span> NEWS </span>
             </div>
             {/* box dalem (hitam) */}
             <div className="flex justify-center pb-5">

@@ -22,7 +22,7 @@ export default function MainNavigation() {
                 </span>
             </nav>
             {/* darken background */}
-            <div className="absolute h-full w-full bg-[#1A1A1A] opacity-75 top-0 left-0 z-10" />
+            <div className="absolute h-full w-full bg-[#1A1A1A] opacity-0 top-0 left-0 z-10" />
         </header>
     );
 }
