@@ -50,25 +50,46 @@ export default function HomeBanner() {
 
         <div
             id="carouselExampleControls"
-            class="carousel h-screen w-auto slide relative"
+            className="flex carousel h-screen w-auto slide relative"
             data-bs-ride="carousel"
         >
             {/* item */}
-            <div class="carousel-inner relative w-full h-full overflow-hidden">
-                <div className="">
-                    <div class="carousel-item active relative float-left w-full ">
-                        <img src="assets/citra.jpg" alt="houseCitra" />
-                    </div>
-                    <div class="carousel-item relative float-left w-full">
-                        <img src="assets/sasa.jpg" alt="sasa" />
-                    </div>
-                    <div class="carousel-item relative float-left w-full">
-                        <img src="assets/kantor.jpg" alt="kantor" />
-                    </div>
+            <div className="carousel-inner relative w-full h-full overflow-hidden font-['Montserrat'] text-[100px] tracking-wider">
+                <div className=" carousel-item active relative float-left w-full text-white h-full ">
+                    <img
+                        src="assets/citra.jpg"
+                        alt="houseCitra"
+                        className="absolute"
+                    />
+
+                    <span className="absolute bottom-0 left-5 z-50 ">
+                        Citra Home
+                    </span>
+                </div>
+                <div className=" carousel-item relative float-left w-full text-white h-full">
+                    <img
+                        src="assets/sasa.jpg"
+                        alt="sasa"
+                        className="absolute"
+                    />
+                    <span className="absolute bottom-0 left-5 z-50">
+                        Sasa Restaurant
+                    </span>
+                </div>
+                <div className=" carousel-item relative float-left w-full text-white h-full">
+                    <img
+                        src="assets/kantor.jpg"
+                        alt="kantor"
+                        className="absolute"
+                    />
+                    <span className="absolute bottom-0 left-5 z-50">
+                        Office ABC
+                    </span>
                 </div>
             </div>
             {/* background dimmer */}
-            <div className="absolute h-full w-full bg-black opacity-50 top-0 left-0 flex items-center justify-center pt-[90px]" />
+            <div className="absolute h-full w-full bg-black opacity-50 top-0 left-0 flex items-center justify-center pt-[90px]"></div>
+
             <button
                 class="carousel-control-prev absolute top-[90px] bottom-0  flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 w-20"
                 data-bs-target="#carouselExampleControls"
