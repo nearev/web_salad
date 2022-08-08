@@ -53,8 +53,30 @@ export default function HomeBanner() {
             className="flex carousel h-screen w-auto slide relative"
             data-bs-ride="carousel"
         >
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-[100]">
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                ></button>
+            </div>
             {/* item */}
-            <div className="carousel-inner relative w-full h-full overflow-hidden font-['Montserrat'] text-[100px] tracking-wider">
+            <div className="carousel-inner relative w-full h-full overflow-hidden font-['Montserrat'] text-[90px] tracking-wider">
                 <div className=" carousel-item active relative float-left w-full text-white h-full ">
                     <img
                         src="assets/Kamen-Rider-drive.png"
@@ -62,7 +84,7 @@ export default function HomeBanner() {
                         className="absolute w-full"
                     />
 
-                    <span className="absolute bottom-0 left-5 z-50 opacity-80">
+                    <span className="absolute bottom-0 left-5 z-50 opacity-80 pb-4">
                         Citra Home
                     </span>
                 </div>
@@ -72,7 +94,7 @@ export default function HomeBanner() {
                         alt="sasa"
                         className="absolute  w-full"
                     />
-                    <span className="absolute bottom-0 left-5 z-50 opacity-80">
+                    <span className="absolute bottom-0 left-5 z-50 opacity-80 pb-4">
                         Sasa Restaurant
                     </span>
                 </div>
@@ -82,7 +104,7 @@ export default function HomeBanner() {
                         alt="kantor"
                         className="absolute w-full"
                     />
-                    <span className="absolute bottom-0 left-5 z-50 opacity-80">
+                    <span className="absolute bottom-0 left-5 z-50 opacity-80 pb-4">
                         Office ABC
                     </span>
                 </div>
