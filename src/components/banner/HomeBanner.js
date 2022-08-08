@@ -54,49 +54,31 @@ export default function HomeBanner() {
         // </div>
 
         <div
-            id="carouselExampleControls"
+            id="mycarousel"
             className="flex carousel h-screen w-auto slide relative"
             data-bs-ride="carousel"
         >
             <ol className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-[100] ">
-                <button
+                <li
                     type="button"
-                    data-bs-target="#carouselExampleControls"
+                    data-bs-target="#mycarousel"
                     data-bs-slide-to="0"
                     className="active"
                     aria-current="true"
-                    aria-label="Slide 1"
                     style={styles}
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                    className=""
-                    style={styles}
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                    className=""
-                    style={styles}
-                ></button>
-                {/* <li
-                    data-bs-target="#carouselExampleControls"
-                    data-bs-slide-to="0"
-                    class="active"
                 ></li>
                 <li
-                    data-bs-target="#carouselExampleControls"
+                    type="button"
+                    data-bs-target="#mycarousel"
                     data-bs-slide-to="1"
+                    style={styles}
                 ></li>
                 <li
-                    data-bs-target="#carouselExampleControls"
+                    type="button"
+                    data-bs-target="#mycarousel"
                     data-bs-slide-to="2"
-                ></li> */}
+                    style={styles}
+                ></li>
             </ol>
             {/* item */}
             <div className="carousel-inner relative w-full h-full overflow-hidden font-['Montserrat'] text-[90px] tracking-wider">
@@ -137,14 +119,14 @@ export default function HomeBanner() {
 
             <button
                 class="carousel-control-prev absolute top-[90px] bottom-0  flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 w-20"
-                data-bs-target="#carouselExampleControls"
+                data-bs-target="#mycarousel"
                 data-bs-slide="prev"
             >
                 <ArrowBackIosIcon />
             </button>
             <button
                 class="carousel-control-next absolute top-[90px] bottom-0 flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 w-20"
-                data-bs-target="#carouselExampleControls"
+                data-bs-target="#mycarousel"
                 data-bs-slide="next"
             >
                 <ArrowForwardIosIcon />
