@@ -57,32 +57,32 @@ export default function HomeBanner() {
             <div className="carousel-inner relative w-full h-full overflow-hidden font-['Montserrat'] text-[100px] tracking-wider">
                 <div className=" carousel-item active relative float-left w-full text-white h-full ">
                     <img
-                        src="assets/citra.jpg"
+                        src="assets/Kamen-Rider-drive.png"
                         alt="houseCitra"
-                        className="absolute"
+                        className="absolute w-full"
                     />
 
-                    <span className="absolute bottom-0 left-5 z-50 ">
+                    <span className="absolute bottom-0 left-5 z-50 opacity-80">
                         Citra Home
                     </span>
                 </div>
                 <div className=" carousel-item relative float-left w-full text-white h-full">
                     <img
-                        src="assets/sasa.jpg"
+                        src="assets/Date_Birth_Profile.jpg"
                         alt="sasa"
-                        className="absolute"
+                        className="absolute  w-full"
                     />
-                    <span className="absolute bottom-0 left-5 z-50">
+                    <span className="absolute bottom-0 left-5 z-50 opacity-80">
                         Sasa Restaurant
                     </span>
                 </div>
                 <div className=" carousel-item relative float-left w-full text-white h-full">
                     <img
-                        src="assets/kantor.jpg"
+                        src="assets/kantor.webp"
                         alt="kantor"
-                        className="absolute"
+                        className="absolute w-full"
                     />
-                    <span className="absolute bottom-0 left-5 z-50">
+                    <span className="absolute bottom-0 left-5 z-50 opacity-80">
                         Office ABC
                     </span>
                 </div>
