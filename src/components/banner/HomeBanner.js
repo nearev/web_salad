@@ -19,6 +19,11 @@ export default function HomeBanner() {
     //     setStyle(backgrounds[currIdx]);
     //     console.log(currIdx);
     // };
+    const styles = {
+        width: 10 + "px",
+        height: 10 + "px",
+        borderRadius: 100 + "%",
+    };
     return (
         // <div
         //     className="relative h-screen w-auto bg-cover bg-center pt-[90px] "
@@ -53,28 +58,46 @@ export default function HomeBanner() {
             className="flex carousel h-screen w-auto slide relative"
             data-bs-ride="carousel"
         >
-            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-[100]">
+            <ol className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-[100] ">
                 <button
                     type="button"
                     data-bs-target="#carouselExampleControls"
                     data-bs-slide-to="0"
-                    class="active"
+                    className="active"
                     aria-current="true"
                     aria-label="Slide 1"
+                    style={styles}
                 ></button>
                 <button
                     type="button"
                     data-bs-target="#carouselExampleControls"
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
+                    className=""
+                    style={styles}
                 ></button>
                 <button
                     type="button"
                     data-bs-target="#carouselExampleControls"
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
+                    className=""
+                    style={styles}
                 ></button>
-            </div>
+                {/* <li
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide-to="0"
+                    class="active"
+                ></li>
+                <li
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide-to="1"
+                ></li>
+                <li
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide-to="2"
+                ></li> */}
+            </ol>
             {/* item */}
             <div className="carousel-inner relative w-full h-full overflow-hidden font-['Montserrat'] text-[90px] tracking-wider">
                 <div className=" carousel-item active relative float-left w-full text-white h-full ">

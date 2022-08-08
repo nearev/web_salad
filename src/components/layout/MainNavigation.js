@@ -11,7 +11,7 @@ export default function MainNavigation() {
                 />
             </div>
             {/* Links / Navbar */}
-            <nav className="flex relative justify-end px-5 items-center h-full font-['Lato'] font-light italic text-[20px] z-20">
+            <nav className="flex relative justify-end px-5 items-center h-full font-['Lato'] font-light italic text-[18px] z-20">
                 <span className="px-4 hover:font-bold transition-all duration-200 cursor-pointer">
                     <Link to="/">Home</Link>
                 </span>
