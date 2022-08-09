@@ -118,14 +118,14 @@ export default function HomeBanner() {
             <div className="absolute h-full w-full bg-black opacity-50 top-0 left-0 flex items-center justify-center pt-[90px]"></div>
 
             <button
-                class="carousel-control-prev absolute top-[90px] bottom-0  flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 w-20"
+                className="carousel-control-prev absolute top-[90px] bottom-0  flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 w-20"
                 data-bs-target="#mycarousel"
                 data-bs-slide="prev"
             >
                 <ArrowBackIosIcon />
             </button>
             <button
-                class="carousel-control-next absolute top-[90px] bottom-0 flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 w-20"
+                className="carousel-control-next absolute top-[90px] bottom-0 flex items-center justify-around hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 w-20"
                 data-bs-target="#mycarousel"
                 data-bs-slide="next"
             >

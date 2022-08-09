@@ -5,7 +5,7 @@ import HomeBanner from "../components/banner/HomeBanner";
 import News from "../components/content/News";
 export default function Home() {
     return (
-        <div className="tracking-widest">
+        <main className="tracking-widest">
             <header>
                 <HomeBanner />
                 <News />
@@ -14,6 +14,6 @@ export default function Home() {
                 <FooterContact />
                 <Footer />
             </footer>
-        </div>
+        </main>
     );
 }
