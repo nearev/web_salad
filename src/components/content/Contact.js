@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function About() {
+export default function Contact() {
     return (
         <div className="pt-52 text-center items-center flex justify-center flex-col">
             <h2 className="font-bold text-3xl">CONTACT US</h2>
