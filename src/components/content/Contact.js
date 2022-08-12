@@ -14,19 +14,22 @@ export default function Contact() {
             </p>
 
             {/* Contact form */}
-            <form className="mt-10">
+            <form className="mt-12">
                 <div className="flex flex-row">
-                    <div className="flex flex-col text-right p-3">
+                    <div className="flex flex-col text-right p-3 text-sm">
                         <label htmlFor="name" className="mb-3 p-1">Name</label>
                         <label htmlFor="email" className="mb-3 p-1">Your Email</label>
                         <label htmlFor="message" className="mb-3 p-1">Message/Question</label>
                     </div>
-                    <div className="flex flex-col p-3">
-                        <input  className="mb-3 p-1 w-96 rounded-sm" type="text" id="name" placeholder="Your Name" />
-                        <input  className="mb-3 p-1 w-96 rounded-sm" type="text" id="email" placeholder="Your Email" />
-                        <textarea className="mb-3 p-1 w-96 rounded-sm" id="message" placeholder="Your Message" />
+                    <div className="flex flex-col p-3 text-sm">
+                        <input  className="mb-3 p-1 px-2 w-96 rounded-sm" type="text" id="name" placeholder="Your Name" />
+                        <input  className="mb-3 p-1 px-2 w-96 rounded-sm" type="text" id="email" placeholder="Your Email" />
+                        <textarea className="mb-3 p-1 w-96 px-2 rounded-sm" id="message" placeholder="Your Message" />
                     </div>
                 </div>
+
+                {/* Submit button */}
+                <button className="mt-8 bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-md w-36">SEND</button>
             </form>
 
         </div>
