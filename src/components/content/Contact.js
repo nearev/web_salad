@@ -22,9 +22,9 @@ export default function Contact() {
                         <label htmlFor="message" className="mb-3 p-1">Message/Question</label>
                     </div>
                     <div className="flex flex-col p-3 text-sm">
-                        <input  className="mb-3 p-1 px-2 w-96 rounded-sm" type="text" id="name" placeholder="Your Name" />
-                        <input  className="mb-3 p-1 px-2 w-96 rounded-sm" type="text" id="email" placeholder="Your Email" />
-                        <textarea className="mb-3 p-1 w-96 px-2 rounded-sm" id="message" placeholder="Your Message" />
+                        <input  className="mb-3 p-1 px-2 w-[40rem] rounded-sm" type="text" id="name" placeholder="Your Name" />
+                        <input  className="mb-3 p-1 px-2 w-[40rem] rounded-sm" type="text" id="email" placeholder="Your Email" />
+                        <textarea className="mb-3 p-1 w-[40rem] px-2 rounded-sm" id="message" placeholder="Your Message" />
                     </div>
                 </div>
 
