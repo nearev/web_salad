@@ -10,10 +10,7 @@ export default function Home() {
                 <HomeBanner />
                 <News />
             </header>
-            <footer>
-                <FooterContact />
-                <Footer />
-            </footer>
+            <FooterContact />
         </main>
     );
 }
