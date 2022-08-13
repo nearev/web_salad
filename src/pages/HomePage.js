@@ -5,7 +5,7 @@ import HomeBanner from "../components/banner/HomeBanner";
 import News from "../components/content/News";
 export default function Home() {
     return (
-        <main className="tracking-widest">
+        <main>
             <header>
                 <HomeBanner />
                 <News />

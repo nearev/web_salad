@@ -2,7 +2,7 @@ import AllProjects from "../components/content/AllProjects";
 
 export default function Projects() {
     return (
-        <main className="font-['Lato'] tracking-widest">
+        <main>
             {/* <ProjectsBanner />
              */}
             <AllProjects />
