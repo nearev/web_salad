@@ -3,12 +3,14 @@ export default function MainNavigation() {
     return (
         <header className="absolute w-full text-white h-[90px] z-10">
             {/* Logo + kalo udh ganti logo, -top30 direvisi lagi*/}
-            <div className="absolute cursor-pointer z-20 px-7 py-3">
-                <img
-                    src="assets/LOGO_WHITE_REMOVED.png"
-                    alt=""
-                    className="w-[75px] h-[75px]"
-                />
+            <div className="absolute cursor-pointer z-30 ml-7 mt-2">
+                <Link to="/">
+                    <img
+                        src="assets/LOGO_WHITE_REMOVED.png"
+                        alt=""
+                        className="w-[75px] h-[75px]"
+                    />
+                </Link>
             </div>
             {/* Links / Navbar */}
             <nav className="flex relative justify-end px-5 items-center h-full font-['Lato'] font-light italic text-[18px] z-20">
