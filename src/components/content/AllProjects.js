@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Gallery from "./Gallery";
 
 export default function AllProjects() {
-    const [hover, setHover] = useState();
     // function handling() {
     //     setHover(true);
     //     console.log(hover);
@@ -10,6 +10,10 @@ export default function AllProjects() {
     //         document.getElementById("box").style.visibility = "visible";
     //     }
     // }
+    const [open, setOpen] = useState(false);
+    function openModal() {
+        setOpen(true);
+    }
 
     return (
         //box paling luar
@@ -18,10 +22,7 @@ export default function AllProjects() {
             <div className="flex grid grid-cols-5 gap-x-24">
                 <div>
                     <div className="absolute">
-                        <button
-                            className="peer transition ease-in-out duration-200 hover:scale-110"
-                            // onMouseEnter={handling}
-                        >
+                        <button className="peer transition ease-in-out duration-200 hover:scale-110">
                             <span className="tracking-widest">Office</span>
                         </button>
 
@@ -46,10 +47,20 @@ export default function AllProjects() {
                                 className="w-24 h-24 rounded-lg mt-4"
                                 alt=""
                             /> */}
-                            <span className="mt-4">Kantor A</span>
+                            <button className="mt-4" onClick={openModal}>
+                                <span>Kantor A</span>
+                            </button>
+
                             <span className="mt-4">Kantor B</span>
                             <span className="mt-4">Kantor ANB</span>
                             <span className="mt-4">Kantor BA</span>
+                            <Gallery
+                                open={open}
+                                setOpen={setOpen}
+                                className="h-screen relative"
+                            >
+                                Testing
+                            </Gallery>
                         </div>
 
                         {/* <div className="hidden peer-hover:flex hover:flex flex flex-col" >
