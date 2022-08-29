@@ -1,7 +1,19 @@
-/* .modal {
-    width: 1000px;
-    height: 90%;
-    background: black;
-    border: 1px solid #ccc;
-    box-shadow: -2rem 2rem 2rem rgba(black, 0.2);
-} */
+.Modal {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 1000;
+    background-color: #272727;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
