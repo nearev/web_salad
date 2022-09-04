@@ -7,14 +7,18 @@ export default function AllProjects() {
     const dummyData = [
         {
             name: "Kantor A",
-            image: "https://upload.wikimedia.org/wikipedia/en/b/b0/Kamen_rider_eurodata.png",
-            desc: "Lorem ipsum suka kamen",
+            category: "Interior",
+            status: "Completed",
+            image: "https://images.adsttc.com/media/images/629f/3517/c372/5201/650f/1c7f/large_jpg/hyde-park-house-robeson-architects_1.jpg?1654601149",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         },
 
         {
             name: "Kantor B",
-            image: "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/10/4/49920a30-8ccc-41d8-8178-491c6b568960.jpg",
-            desc: "Satria suka putra",
+            category: "Exterior",
+            status: "Not Completed",
+            image: "https://www.l37.com.au/cms/content/uploads/2022/01/luxury-home-builders-melbourne-960x645.jpg",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         },
     ];
     const [open, setOpen] = useState(false);
@@ -29,9 +33,7 @@ export default function AllProjects() {
         <div className="flex justify-center bg-[#323232] h-screen text-white items-center overflow-auto">
             {/* dalem */}
             {/* <div className="fixed flex justify-center items-center z-30"> */}
-            <Gallery open={open} setOpen={setOpen} data={modal}>
-                Testing
-            </Gallery>
+            <Gallery open={open} setOpen={setOpen} data={modal}></Gallery>
             {/* </div> */}
 
             <div className="flex grid grid-cols-5 gap-x-24">
@@ -62,13 +64,7 @@ export default function AllProjects() {
                                 className="w-24 h-24 rounded-lg mt-4"
                                 alt=""
                             /> */}
-                            {/* <button className="mt-4" onClick={openModal}>
-                                <span>Kantor A</span>
-                            </button>
 
-                            <span className="mt-4">Kantor B</span>
-                            <span className="mt-4">Kantor ANB</span>
-                            <span className="mt-4">Kantor BA</span> */}
                             {dummyData.map((data) => {
                                 return (
                                     <span
@@ -122,26 +118,16 @@ export default function AllProjects() {
                             <span className="tracking-widest">House</span>
                         </button>
                         <div className="hidden peer-hover:flex hover:flex flex flex-col peer-hover:h-auto hover:h-auto">
-                            <img
-                                src="assets/kantor.jpg"
-                                className="w-24 h-24 rounded-lg mt-5"
-                                alt=""
-                            />
-                            <img
-                                src="assets/9.jpg"
-                                className="w-24 h-24 rounded-lg mt-5"
-                                alt=""
-                            />
-                            <img
-                                src="assets/tawa.jpg"
-                                className="w-24 h-24 rounded-lg mt-5"
-                                alt=""
-                            />
-                            <img
-                                src="assets/sasa.jpg"
-                                className="w-24 h-24 rounded-lg mt-5"
-                                alt=""
-                            />
+                            {dummyData.map((data) => {
+                                return (
+                                    <span
+                                        className="mt-4"
+                                        onClick={() => openModal(data)}
+                                    >
+                                        {data.name}
+                                    </span>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
