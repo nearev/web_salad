@@ -29,50 +29,28 @@ export default function AllProjects() {
     }
 
     return (
-        //box paling luar
+        //Box paling luar
         <div className="flex justify-center bg-[#323232] h-screen text-white items-center overflow-auto">
             {/* dalem */}
-            {/* <div className="fixed flex justify-center items-center z-30"> */}
+
             <Gallery open={open} setOpen={setOpen} data={modal}></Gallery>
-            {/* </div> */}
 
             <div className="flex grid grid-cols-5 gap-x-24">
                 <div>
                     <div className="absolute">
-                        <button className="peer transition ease-in-out duration-200 hover:scale-110">
+                        <button className="peer transition ease-in-out duration-200 hover:scale-110 ">
                             <span className="tracking-widest">Office</span>
                         </button>
 
-                        <div className="hidden peer-hover:flex hover:flex flex flex-col">
-                            {/* <img
-                                src="assets/kantor.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            />
-                            <img
-                                src="assets/9.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            />
-                            <img
-                                src="assets/tawa.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            />
-                            <img
-                                src="assets/sasa.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            /> */}
-
+                        <ul className="hidden peer-hover:flex hover:flex flex flex-col transition duration-150 ease-in-out ">
                             {dummyData.map((data) => {
                                 return (
-                                    <span
-                                        className="mt-4"
+                                    <li
+                                        className="mt-4 cursor-pointer transition ease-in-out hover:scale-110"
                                         onClick={() => openModal(data)}
                                     >
                                         {data.name}
-                                    </span>
+                                    </li>
                                 );
                             })}
 
@@ -85,43 +63,20 @@ export default function AllProjects() {
                                 <span>Testing</span> <br></br>
                                 <button onClick={closeModal}>Close</button>
                             </Modal> */}
-                        </div>
-
-                        {/* <div className="hidden peer-hover:flex hover:flex flex flex-col" >
-                            <img
-                                src="assets/kantor.jpg"
-                                className="w-24 h-24 rounded-lg mt-2"
-                                alt=""
-                            />
-                            <img
-                                src="assets/9.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            />
-                            <img
-                                src="assets/tawa.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            />
-                            <img
-                                src="assets/sasa.jpg"
-                                className="w-24 h-24 rounded-lg mt-4"
-                                alt=""
-                            />
-                        </div> */}
+                        </ul>
                     </div>
                 </div>
 
                 <div>
                     <div className="absolute">
-                        <button className="peer">
+                        <button className="peer transition ease-in-out duration-200 hover:scale-110">
                             <span className="tracking-widest">House</span>
                         </button>
                         <div className="hidden peer-hover:flex hover:flex flex flex-col peer-hover:h-auto hover:h-auto">
                             {dummyData.map((data) => {
                                 return (
                                     <span
-                                        className="mt-4"
+                                        className="mt-4 cursor-pointer"
                                         onClick={() => openModal(data)}
                                     >
                                         {data.name}
