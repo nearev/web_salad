@@ -38,11 +38,11 @@ export default function AllProjects() {
             <div className="flex grid grid-cols-5 gap-x-24">
                 <div>
                     <div className="absolute">
-                        <button className="peer transition ease-in-out duration-200 hover:scale-110 ">
+                        <button className="peer transition ease-in-out duration-200 hover:scale-110">
                             <span className="tracking-widest">Office</span>
                         </button>
 
-                        <ul className="hidden peer-hover:flex hover:flex flex flex-col transition duration-150 ease-in-out ">
+                        <ul className="hidden peer-hover:flex hover:flex flex flex-col peer-hover:h-auto hover:h-auto">
                             {dummyData.map((data) => {
                                 return (
                                     <li
@@ -72,18 +72,18 @@ export default function AllProjects() {
                         <button className="peer transition ease-in-out duration-200 hover:scale-110">
                             <span className="tracking-widest">House</span>
                         </button>
-                        <div className="hidden peer-hover:flex hover:flex flex flex-col peer-hover:h-auto hover:h-auto">
+                        <ul className="hidden peer-hover:flex hover:flex flex flex-col peer-hover:h-auto hover:h-auto">
                             {dummyData.map((data) => {
                                 return (
-                                    <span
-                                        className="mt-4 cursor-pointer"
+                                    <li
+                                        className="mt-4 cursor-pointer transition ease-in-out hover:scale-110"
                                         onClick={() => openModal(data)}
                                     >
                                         {data.name}
-                                    </span>
+                                    </li>
                                 );
                             })}
-                        </div>
+                        </ul>
                     </div>
                 </div>
                 <div>Commercial</div>
