@@ -51,7 +51,7 @@ export default function Contact() {
                 </div>
 
                 {/* Submit button */}
-                <button className="mt-8 bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-md w-36">
+                <button className="my-8 bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-md w-36">
                     SEND
                 </button>
             </form>
