@@ -3,9 +3,11 @@ import Footer from "../bottombar/Footer";
 
 export default function Layout(props) {
     return (
-        <div className="font-['Lato'] tracking-widest leading-relaxed bg-[#323232] text-white h-screen">
-            <MainNavigation />
-            <main>{props.children}</main>
+        <div className="font-['Lato'] tracking-widest leading-relaxed">
+            <div className="bg-[#323232] text-white h-fit min-h-screen">
+                <MainNavigation />
+                <main>{props.children}</main>
+            </div>
             <footer>
                 <Footer />
             </footer>
