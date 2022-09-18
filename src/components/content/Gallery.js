@@ -1,8 +1,13 @@
 import classes from "./Gallery.module.css";
 import CloseIcon from "@mui/icons-material/Close";
+import { useState } from "react";
 export default function Gallery(props) {
     function dismissModal() {
         props.setOpen(false);
+    }
+    const [toggle, setToggle] = useState();
+    function handleToggle(x) {
+        setToggle(x);
     }
     return (
         <>
@@ -26,65 +31,77 @@ export default function Gallery(props) {
                         {/* Gambar Utama */}
                         <div className="flex justify-center">
                             <img
-                                src={props.data.image}
+                                // ini agak sus code bawahku
+                                src={props.data.images}
                                 alt={props.data.name}
-                                className="w-7/12 h-[50vh] rounded-lg mb-4 drop-shadow-xl"
+                                className="w-6/12 h-[50vh] rounded-lg mb-4 drop-shadow-xl "
                             />
                         </div>
                         <div className="flex w-full justify-center mt-2">
-                            <img
+                            {props.data.images.map((x) => {
+                                return (
+                                    <img
+                                        src={x}
+                                        className="w-24 h-20 mx-4 rounded-lg"
+                                        onClick={() => handleToggle(x)}
+                                    />
+                                );
+                            })}
+                            {/* <img
                                 src="https://images.thewest.com.au/publication/C-5745817/8d96b1d05907df391f76a15e1ef1708093e87a6e-4x3-x121y0w1937h1453.jpg"
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
+                                className="w-24 h-20 mx-4 rounded-lg"
                             />
                             <img
                                 src={props.data.image}
-                                className="w-1/12 h-1/12 mx-4 rounded-lg"
-                            />
+                                className="w-24 h-20 mx-4 rounded-lg"
+                            /> */}
                         </div>
                         {/* Box gede */}
-                        <div className="flex p-5">
+                        <div className="flex">
                             {/* Box Kiri */}
                             <div className="w-2/3">
-                                <span className="text-[24px] drop-shadow-xl">
+                                <span className="text-[15px] drop-shadow-xl">
                                     {props.data.name}
                                 </span>
                                 <br></br>
-                                <span>{props.data.category}, </span>
-                                <span className="italic font-light">
+                                <span className="text-[15px]">
+                                    {props.data.category},{" "}
+                                </span>
+                                <span className="text-[15px] italic font-light">
                                     {props.data.status}
                                 </span>
                                 <div>
-                                    <span className="text-[12px] text-justify ">
+                                    <span className="text-[10px] text-justify ">
                                         {props.data.desc}
                                     </span>
                                 </div>
                             </div>
                             {/* Box kanan */}
-                            <div className="pl-24 text-[12px] leading-9 font-light">
+                            <div className="pl-24 py-5 text-[12px] leading-5 font-light">
                                 <p>Program: Abcs daslk</p>
                                 <p>Size: 10m</p>
                                 <p>Location: Permata Buana</p>
