@@ -5,10 +5,8 @@ export default function Gallery(props) {
     function dismissModal() {
         props.setOpen(false);
     }
-    const [toggle, setToggle] = useState();
-    function handleToggle(x) {
-        setToggle(x);
-    }
+    const [toggle, setToggle] = useState(0);
+
     return (
         <>
             {/* ini punya axell */}
@@ -32,18 +30,18 @@ export default function Gallery(props) {
                         <div className="flex justify-center">
                             <img
                                 // ini agak sus code bawahku
-                                src={props.data.images}
+                                src={props.data.images[toggle]}
                                 alt={props.data.name}
                                 className="w-6/12 h-[50vh] rounded-lg mb-4 drop-shadow-xl "
                             />
                         </div>
                         <div className="flex w-full justify-center mt-2">
-                            {props.data.images.map((x) => {
+                            {props.data.images.map((x, index) => {
                                 return (
                                     <img
                                         src={x}
                                         className="w-24 h-20 mx-4 rounded-lg"
-                                        onClick={() => handleToggle(x)}
+                                        onClick={() => setToggle(index)}
                                     />
                                 );
                             })}
