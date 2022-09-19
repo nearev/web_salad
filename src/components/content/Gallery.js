@@ -1,11 +1,14 @@
 import classes from "./Gallery.module.css";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Gallery(props) {
     function dismissModal() {
         props.setOpen(false);
     }
     const [toggle, setToggle] = useState(0);
+    useEffect(() => {
+        setToggle(0);
+    }, [props.open]);
 
     return (
         <>
@@ -29,17 +32,16 @@ export default function Gallery(props) {
                         {/* Gambar Utama */}
                         <div className="flex justify-center">
                             <img
-                                // ini agak sus code bawahku
                                 src={props.data.images[toggle]}
                                 alt={props.data.name}
                                 className="w-6/12 h-[50vh] rounded-lg mb-4 drop-shadow-xl "
                             />
                         </div>
                         <div className="flex w-full justify-center mt-2">
-                            {props.data.images.map((x, index) => {
+                            {props.data.images.map((image, index) => {
                                 return (
                                     <img
-                                        src={x}
+                                        src={image}
                                         className="w-24 h-20 mx-4 rounded-lg"
                                         onClick={() => setToggle(index)}
                                     />
@@ -99,7 +101,7 @@ export default function Gallery(props) {
                                 </div>
                             </div>
                             {/* Box kanan */}
-                            <div className="pl-24 py-5 text-[12px] leading-5 font-light">
+                            <div className="pl-24 py-5 text-[10px] leading-5 font-light">
                                 <p>Program: Abcs daslk</p>
                                 <p>Size: 10m</p>
                                 <p>Location: Permata Buana</p>
