@@ -23,18 +23,18 @@ export default function Gallery(props) {
             )} */}
             {props.open && (
                 <div className="flex justify-center items-center top-0 left-0 fixed w-[100%] h-[100%] z-40">
-                    <div className="p-7 bg-[#272727] h-[90vh] w-[90vw] z-50 rounded-lg opacity-90">
+                    <div className="flex flex-col p-7 bg-[#272727] h-[90vh] w-[90vw] z-50 rounded-lg opacity-90">
                         <div className="flex justify-end">
                             <button onClick={dismissModal} className="absolute">
                                 <CloseIcon />
                             </button>
                         </div>
                         {/* Gambar Utama */}
-                        <div className="flex justify-center">
+                        <div className="flex justify-center content-center rounded-lg bg-black mb-4 w-[600px] self-center">
                             <img
                                 src={props.data.images[toggle]}
                                 alt={props.data.name}
-                                className="w-6/12 h-[50vh] rounded-lg mb-4 drop-shadow-xl "
+                                className="h-[50vh] drop-shadow-xl"
                             />
                         </div>
                         <div className="flex w-full justify-center mt-2">
