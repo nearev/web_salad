@@ -1,16 +1,13 @@
 import classes from "./Gallery.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 export default function Gallery(props) {
-    function dismissModal() {
-        props.setOpen(false);
-    }
     const [toggle, setToggle] = useState(0);
     useEffect(() => {
         setToggle(0);
     }, [props.open]);
-    console.log(props.project.id);
+    // testttt
     return (
         <>
             {/* ini punya axell */}
