@@ -1,11 +1,11 @@
 import AllProjects from "../components/content/AllProjects";
 
-export default function Projects() {
+export default function Projects({ dummyData }) {
     return (
         <main>
             {/* <ProjectsBanner />
              */}
-            <AllProjects />
+            <AllProjects dummyData={dummyData} />
         </main>
     );
 }
