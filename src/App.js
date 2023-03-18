@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
+import ProjectPage from "./pages/ProjectPage";
 import DetailPage from "./pages/DetailPage";
 
 function App({ dummyData }) {
@@ -18,7 +19,12 @@ function App({ dummyData }) {
                     element={<ProjectsPage dummyData={dummyData} />}
                 />
                 <Route
-                    path="/projects/:id"
+                    path="/projects/:name"
+                    element={<ProjectPage dummyData={dummyData} />}
+                />
+
+                <Route
+                    path="/projects/:name/:id"
                     element={<DetailPage dummyData={dummyData} />}
                 />
                 <Route path="/contact" element={<ContactPage />} />
