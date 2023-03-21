@@ -91,7 +91,7 @@ export default function HomeBanner() {
 
             <div
                 id="mycarousel"
-                className="flex carousel h-screen w-auto slide relative"
+                className="flex carousel h-full w-full slide relative 2xl:w-[100%] 2xl:h-screen xl:w-auto xl:h-screen lg:h-screen lg:w-auto md:h-screen md:w-auto sm:h-screen sm:w-auto"
                 data-bs-ride="carousel"
             >
                 <ol className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 z-[100] ">
@@ -123,8 +123,13 @@ export default function HomeBanner() {
                             // src="assets/Kamen-Rider-drive.png"
                             src={images[0].src}
                             alt="houseCitra"
-                            className="absolute w-full"
+                            className="absolute w-full object-cover h-full"
                         />
+                        {/* <div
+                            style={{
+                                backgroundImage: `url(assets/${images[0].src})`,
+                            }}
+                        /> */}
 
                         <span className="absolute bottom-0 left-5 z-50 opacity-80 pb-4">
                             Citra Home
@@ -135,7 +140,7 @@ export default function HomeBanner() {
                             // src="assets/Date_Birth_Profile.jpg"
                             src={images[1].src}
                             alt="sasa"
-                            className="absolute  w-full"
+                            className="absolute h-full w-full object-cover"
                         />
                         <span className="absolute bottom-0 left-5 z-50 opacity-80 pb-4">
                             Sasa Restaurant
@@ -146,7 +151,7 @@ export default function HomeBanner() {
                             // src="assets/kantor.webp"
                             src={images[2].src}
                             alt="kantor"
-                            className="absolute w-full"
+                            className="absolute h-full w-full object-cover"
                         />
                         <span className="absolute bottom-0 left-5 z-50 opacity-80 pb-4">
                             Office ABC

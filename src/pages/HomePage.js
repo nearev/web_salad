@@ -6,7 +6,7 @@ import News from "../components/content/News";
 export default function Home() {
     return (
         <main>
-            <header>
+            <header className="w-full">
                 <HomeBanner />
                 <News />
             </header>

@@ -1,7 +1,7 @@
 export default function News() {
     return (
         //box luar
-        <div className="font-['Lato'] bg-[#323332] text-white ">
+        <div className="font-['Lato'] bg-[#323332] text-white w-auto ">
             {/* judul*/}
             <div className="flex-grow mb-auto text-2xl pl-16 py-14">
                 <span> NEWS </span>
@@ -9,17 +9,17 @@ export default function News() {
             {/* box dalem (hitam) */}
             <div className="flex justify-center pb-5">
                 {/* box 1 */}
-                <div className="flex bg-[#292929] w-[1300px] h-[550px] rounded-xl">
+                <div className="flex bg-[#292929] 2xl:w-[1300px] h-[550px] xl:w-[1000px] lg:w-[800px] md:w-[650px] sm:w-[550px] rounded-xl">
                     {/* ini gambar */}
                     <div className="flex items-center justify-center w-[750px] pl-12">
                         <img
                             src="assets/citra.jpg"
                             alt=""
-                            className="w-[750px] h-[420px] rounded-lg"
+                            className="w-[750px] h-[420px] rounded-lg object-cover"
                         />
                     </div>
                     {/* ini description */}
-                    <div className="flex items-center w-[550px] h-full px-12">
+                    <div className="flex items-center w-[550px]  h-full px-12">
                         <div>
                             <div className="flex relative">
                                 <p>
@@ -39,7 +39,7 @@ export default function News() {
             </div>
             <div className="flex justify-center pb-14">
                 {/* box 2 */}
-                <div className="flex bg-[#292929] w-[1300px] h-[550px] rounded-xl">
+                <div className="flex bg-[#292929] 2xl:w-[1300px] h-[550px] xl:w-[1000px] lg:w-[800px] md:w-[650px] sm:w-[550px] rounded-xl">
                     {/* ini description */}
                     <div className="flex justify-center items-center w-[550px] h-auto px-12">
                         <div>
@@ -62,7 +62,7 @@ export default function News() {
                         <img
                             src="assets/sasa.jpg"
                             alt=""
-                            className="w-[750px] h-[420px] rounded-lg"
+                            className="w-[750px] h-[420px] rounded-lg object-cover"
                         />
                     </div>
                 </div>

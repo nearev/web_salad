@@ -6,7 +6,7 @@ export default function ProjectPage({ dummyData }) {
     console.log(project);
     return (
         <main>
-            <div className="top-28 relative px-5">
+            <div className="top-28 relative px-8">
                 <span className="text-7xl font-bold">{name}</span>
                 <ul>
                     {project.projects.map((project) => (
