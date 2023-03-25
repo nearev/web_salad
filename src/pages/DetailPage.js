@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Gallery from "../components/content/Gallery";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,11 +11,16 @@ export default function DetailPage({ dummyData }) {
     const project = dummyData.type
         .find((data) => data.name === name)
         ?.projects.find((info) => info.id === id);
-    SwiperCore.use([Navigation, Pagination]);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [mainSwiper, setMainSwiper] = useState();
 
+    SwiperCore.use([Navigation, Pagination]);
+    const handleSlideClick = (index) => {
+        setActiveIndex(index);
+        mainSwiper.slideTo(index);
+    };
     return (
         <main>
-            {/* <Gallery project={project} /> */}
             <div className="top-28 relative px-8 w-full h-auto">
                 <div className="flex justify-between">
                     <div className="w-1/5">
@@ -37,27 +42,46 @@ export default function DetailPage({ dummyData }) {
                             </p>
                         </div>
                     </div>
-                    <div className="h-[80vh] w-3/4 rounded-lg">
-                        {/* <img
-                            src="https://images.adsttc.com/media/images/629f/3517/c372/5201/650f/1c7f/large_jpg/hyde-park-house-robeson-architects_1.jpg?1654601149"
-                            className="w-full h-5/6 object-cover rounded-t-lg"
-                        /> */}
+                    <div className="h-[65vh] w-3/4 rounded-lg">
                         <Swiper
-                            spaceBetween={60}
                             slidesPerView={1}
-                            pagination={{ clickable: true }}
-                            onSlideChange={() => console.log("slide change")}
+                            onSlideChange={(e) => setActiveIndex(e.activeIndex)}
+                            onSwiper={(swiper) => setMainSwiper(swiper)}
                             className="w-full h-full"
                         >
-                            <SwiperSlide>
-                                <img
-                                    src="https://images.adsttc.com/media/images/629f/3517/c372/5201/650f/1c7f/large_jpg/hyde-park-house-robeson-architects_1.jpg?1654601149"
-                                    className="w-full h-5/6 object-cover rounded-t-lg"
-                                />
-                            </SwiperSlide>
-                            <SwiperSlide>Slide 2</SwiperSlide>
-                            <SwiperSlide>Slide 3</SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
+                            {project.images.map((image, index) => (
+                                <SwiperSlide>
+                                    <img
+                                        src={image}
+                                        className="w-full h-full object-cover rounded-lg"
+                                        key={index}
+                                        alt={index}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                        <Swiper
+                            spaceBetween={10}
+                            autoHeight={true}
+                            slidesPerView={5}
+                            onClick={(e) => handleSlideClick(e.clickedIndex)}
+                            className="w-[800px] "
+                        >
+                            {project.images.map((image, index) => (
+                                <SwiperSlide className="pt-5">
+                                    <img
+                                        src={image}
+                                        className={`object-cover rounded-lg h-[100px] ${
+                                            index === activeIndex
+                                                ? "border-2 border-blue-500 "
+                                                : ""
+                                        }`}
+                                        key={index}
+                                        alt={index}
+                                    />
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
                     </div>
                 </div>
