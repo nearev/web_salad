@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Gallery from "../components/content/Gallery";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.css";
 
 export default function DetailPage({ dummyData }) {
@@ -14,7 +14,7 @@ export default function DetailPage({ dummyData }) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [mainSwiper, setMainSwiper] = useState();
 
-    SwiperCore.use([Navigation, Pagination]);
+    SwiperCore.use([Navigation, Pagination, Autoplay]);
     const handleSlideClick = (index) => {
         setActiveIndex(index);
         mainSwiper.slideTo(index);
@@ -42,12 +42,17 @@ export default function DetailPage({ dummyData }) {
                             </p>
                         </div>
                     </div>
-                    <div className="h-[65vh] w-3/4 rounded-lg">
+                    <div className="h-[65vh] w-3/4">
                         <Swiper
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                            spaceBetween={15}
                             slidesPerView={1}
                             onSlideChange={(e) => setActiveIndex(e.activeIndex)}
                             onSwiper={(swiper) => setMainSwiper(swiper)}
-                            className="w-full h-full"
+                            className="w-full h-full rounded-lg"
                         >
                             {project.images.map((image, index) => (
                                 <SwiperSlide>
@@ -73,9 +78,7 @@ export default function DetailPage({ dummyData }) {
                                     <img
                                         src={image}
                                         className={`object-cover rounded-lg h-[100px] ${
-                                            index === activeIndex
-                                                ? "border-2 border-blue-500 "
-                                                : ""
+                                            index === activeIndex ? "" : ""
                                         }`}
                                         key={index}
                                         alt={index}

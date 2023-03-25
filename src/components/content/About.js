@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
     return (
-        <div className="pt-52 px-32">
+        <div className="pt-36 px-32">
             <div className="">
                 <p className="text-3xl font-semibold">SALAD ARCHITECTS</p>
             </div>
