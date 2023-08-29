@@ -69,7 +69,7 @@ const dummyData = {
             ],
         },
         {
-            name: "Hospital",
+            name: "Hospitality",
             projects: [
                 {
                     id: "3",
