@@ -1,5 +1,17 @@
-.carousel-indicators li {
+/* .carousel-indicators li {
     width: 10px;
     height: 10px;
     border-radius: 100%;
+} */
+
+.carouselContainer {
+    position: relative;
+    height: 100vh;
+}
+
+.carouselContainer .slick-slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

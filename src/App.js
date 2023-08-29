@@ -6,13 +6,21 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
+import DetailPage from "./pages/DetailPage";
 
-function App() {
+function App({ dummyData }) {
     return (
         <Layout>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/projects" element={<ProjectsPage />} />
+                <Route
+                    path="/projects"
+                    element={<ProjectsPage dummyData={dummyData} />}
+                />
+                <Route
+                    path="/projects/:id"
+                    element={<DetailPage dummyData={dummyData} />}
+                />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/about" element={<AboutPage />} />
             </Routes>
