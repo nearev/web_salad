@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Gallery from "../components/content/Gallery";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 import "swiper/swiper-bundle.css";
 
 export default function DetailPage({ dummyData }) {
@@ -14,7 +14,7 @@ export default function DetailPage({ dummyData }) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [mainSwiper, setMainSwiper] = useState();
 
-    SwiperCore.use([Navigation, Pagination, Autoplay]);
+    SwiperCore.use([Navigation, Pagination, Autoplay, Scrollbar]);
     const handleSlideClick = (index) => {
         setActiveIndex(index);
         mainSwiper.slideTo(index);
@@ -72,6 +72,10 @@ export default function DetailPage({ dummyData }) {
                             slidesPerView={5}
                             onClick={(e) => handleSlideClick(e.clickedIndex)}
                             className="w-[800px] "
+                            scrollbar={{
+                                hide: true,
+                            }}
+                            modules={[Scrollbar]}
                         >
                             {project.images.map((image, index) => (
                                 <SwiperSlide className="pt-5">

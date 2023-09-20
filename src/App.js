@@ -13,7 +13,7 @@ function App({ dummyData }) {
     return (
         <Layout>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<HomePage dummyData={dummyData}/>} />
                 <Route
                     path="/projects"
                     element={<ProjectsPage dummyData={dummyData} />}
