@@ -35,17 +35,7 @@ export default function About() {
                         massa. Donec tempor placerat elit vitae vulputate.
                         Mauris pretium congue tortor, sit amet gravida ex
                         imperdiet non. Praesent tempus luctus massa. In laoreet
-                        neque leo, eget pharetra nisi porttitor ac. Aliquam
-                        hendrerit maximus placerat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Aliquam lobortis aliquam
-                        nulla, id porta leo elementum sed. Donec quam ipsum,
-                        consequat at suscipit vitae, euismod sed est. Vestibulum
-                        ultrices commodo felis quis sollicitudin. Donec dapibus,
-                        tellus quis lacinia euismod, lectus diam tristique
-                        tellus, accumsan accumsan justo elit sit amet arcu. Nunc
-                        vitae sagittis tortor. Phasellus eu magna sit amet ante
-                        placerat posuere et sit amet nulla. Morbi vitae sapien
-                        eleifend, rutrum ipsum eget, venenatis lacus.
+                        neque leo, eget pharetra nisi porttitor ac.
                     </p>
                 </div>
                 <div className="px-10">

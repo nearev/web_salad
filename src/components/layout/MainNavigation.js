@@ -11,7 +11,7 @@ export default function MainNavigation() {
         setOpen(false);
     }
     return (
-        <header className="absolute w-full text-white h-[90px]">
+        <div className="absolute w-full text-white h-[90px]">
             <div className="absolute cursor-pointer z-30 ml-7 mt-2" onClick={closeMenu}>
                 <Link to="/">
                     <img
@@ -91,6 +91,6 @@ export default function MainNavigation() {
             </nav>
             {/* darken background */}
             <div className="absolute h-full w-full bg-[#1A1A1A] opacity-0 top-0 left-0" />
-        </header>
+        </div>
     );
 }

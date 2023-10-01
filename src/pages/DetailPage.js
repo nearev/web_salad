@@ -21,76 +21,79 @@ export default function DetailPage({ dummyData }) {
     };
     return (
         <main>
-            <div className="top-28 relative px-8 w-full h-auto">
-                <div className="flex justify-between">
-                    <div className="w-1/5">
-                        <span className="text-2xl font-bold">
-                            {project.name}
-                        </span>
-                        <div>
-                            <span className="font-semibold">
-                                {project.category}
-                            </span>
-                            ,{" "}
-                            <span className="italic font-normal">
-                                {project.status}
-                            </span>
+            <div className="pt-28 relative px-8 w-full h-auto">
+                <div className="md:flex justify-between">
+                    <div className="md:h-[65vh] min-[320px]:h-[55vh] w-full md:w-3/4">
+                            <Swiper
+                                autoplay={{
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                }}
+                                spaceBetween={15}
+                                slidesPerView={1}
+                                onSlideChange={(e) => setActiveIndex(e.activeIndex)}
+                                onSwiper={(swiper) => setMainSwiper(swiper)}
+                                className="w-full md:h-full  rounded-lg"
+                            >
+                                {project.images.map((image, index) => (
+                                    <SwiperSlide>
+                                        <img
+                                            src={image}
+                                            className="w-full h-full  object-cover rounded-lg"
+                                            key={index}
+                                            alt={index}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                            
+                            
+                            <Swiper
+                                spaceBetween={10}
+                                autoHeight={true}
+                                slidesPerView={5}
+                                onClick={(e) => handleSlideClick(e.clickedIndex)}
+                                className="max-w-[36rem] md:w-full min-[320px]:max-w-[20rem] "
+                                scrollbar={{
+                                    hide: true,
+                                }}
+                                modules={[Scrollbar]}
+                            >
+                                {project.images.map((image, index) => (
+                                    <SwiperSlide className="pt-5">
+                                        <img
+                                            src={image}
+                                            className={`object-cover rounded-lg h-[100px] ${
+                                                index === activeIndex ? "" : ""
+                                            }`}
+                                            key={index}
+                                            alt={index}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                            
                         </div>
-                        <div className="py-2">
-                            <p className="text-justify text-2 font-light">
-                                {project.desc}
-                            </p>
+                        <div className="md:w-1/5">
+                            <span className="text-2xl font-bold">
+                                {project.name}
+                            </span>
+                            <div>
+                                <span className="font-semibold">
+                                    {project.category}
+                                </span>
+                                ,{" "}
+                                <span className="italic font-normal">
+                                    {project.status}
+                                </span>
+                            </div>
+                            <div className="py-2 h-auto">
+                                <p className="text-justify md:text-base min-[320px]:text-xs font-light break-words">
+                                    {project.desc}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="h-[65vh] w-3/4">
-                        <Swiper
-                            autoplay={{
-                                delay: 5000,
-                                disableOnInteraction: false,
-                            }}
-                            spaceBetween={15}
-                            slidesPerView={1}
-                            onSlideChange={(e) => setActiveIndex(e.activeIndex)}
-                            onSwiper={(swiper) => setMainSwiper(swiper)}
-                            className="w-full h-full rounded-lg"
-                        >
-                            {project.images.map((image, index) => (
-                                <SwiperSlide>
-                                    <img
-                                        src={image}
-                                        className="w-full h-full object-cover rounded-lg"
-                                        key={index}
-                                        alt={index}
-                                    />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-
-                        <Swiper
-                            spaceBetween={10}
-                            autoHeight={true}
-                            slidesPerView={5}
-                            onClick={(e) => handleSlideClick(e.clickedIndex)}
-                            className="w-[800px] "
-                            scrollbar={{
-                                hide: true,
-                            }}
-                            modules={[Scrollbar]}
-                        >
-                            {project.images.map((image, index) => (
-                                <SwiperSlide className="pt-5">
-                                    <img
-                                        src={image}
-                                        className={`object-cover rounded-lg h-[100px] ${
-                                            index === activeIndex ? "" : ""
-                                        }`}
-                                        key={index}
-                                        alt={index}
-                                    />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
+                    
                 </div>
             </div>
         </main>
