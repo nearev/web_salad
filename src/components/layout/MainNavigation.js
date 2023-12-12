@@ -59,7 +59,7 @@ export default function MainNavigation() {
 
                 {open && (
                     <div
-                    className={`fixed top-0 right-0 w-full h-full bg-zinc-900 opacity-95 flex flex-col justify-center items-center z-50 transform transition-transform duration-300 ${
+                    className={`fixed top-0 right-0 w-full h-full bg-zinc-900 opacity-95 flex flex-col justify-center items-center z-50 transition-transform duration-300 ${
                       open ? 'translate-x-0' : 'translate-x-full'
                     }`}
                   >
