@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-export default function MainNavigation() {
-    const [open, setOpen] = useState(false);
+export default function MainNavigation({open,setOpen}) {
+    // const [open, setOpen] = useState(false);
 
     const toggleMenu = () => {
         setOpen(!open);
@@ -13,7 +13,7 @@ export default function MainNavigation() {
         setOpen(false);
     }
     return (
-        <div className="absolute w-full text-white h-[90px]">
+        <div className={`absolute w-full text-white h-[90px] `}>
             <div className="absolute cursor-pointer z-30 ml-7 mt-2" onClick={closeMenu}>
                 <Link to="/">
                     <img
@@ -26,9 +26,9 @@ export default function MainNavigation() {
             </div>
             {/* Links / Navbar */}
             <AnimatePresence>
-            <motion.nav  className={`flex relative justify-end px-5 items-center h-full font-['Lato'] font-light italic text-[18px] z-10 `}>
-                <div className="md:hidden ">
-                    <Hamburger toggled={open} toggle={toggleMenu} />                   
+            <motion.nav className={` flex relative justify-end px-5 items-center h-full font-['Lato'] font-light italic text-[18px] z-20`}>
+                <div className={`${open ? 'z-30':''} md:hidden `}>
+                    <Hamburger toggled={open} toggle={toggleMenu}/>                   
                 </div>
                 
                 <div className="md:block hidden">
@@ -51,9 +51,9 @@ export default function MainNavigation() {
                         initial={{ opacity: 0}}
                         animate={{opacity:1}}
                         exit={{opacity:0}}
-                        transition={{duration: 0.3}}
+                        transition={{duration: 0.2}}
                         
-                        className={`fixed top-[5.5rem] right-0 w-full shadow-xl flex justify-center  rounded-b-lg`}
+                        className={`bg-neutral-800/75 backdrop-blur-md fixed top-0 right-0 w-full shadow-xl flex justify-center items-center h-full rounded-b-lg`}
                     >
                         <ul className="text-2xl font-bold text-white">
                             <motion.li className="mb-8 hover:font-bold transition-all duration-200 cursor-pointer" onClick={closeMenu}>
